@@ -49,6 +49,21 @@ lspconfig.ruff_lsp.setup {
     }
   }
 }
+lspconfig.rust_analyzer.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  settings = {
+      ['rust-analyzer'] = {
+          check = {
+              command = "clippy";
+          },
+          diagnostics = {
+              enable = true;
+          }
+      }
+  }
+}
+
 -- lspconfig.pylsp.setup {
 --   on_attach = nvlsp.on_attach,
 --   capabilities = nvlsp.capabilities,
