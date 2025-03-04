@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls"}
+local servers = { "html", "cssls", "clangd"}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -63,7 +63,11 @@ lspconfig.rust_analyzer.setup {
       }
   }
 }
-
+lspconfig.clangd.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  filetypes = {"c"},
+}
 -- lspconfig.pylsp.setup {
 --   on_attach = nvlsp.on_attach,
 --   capabilities = nvlsp.capabilities,

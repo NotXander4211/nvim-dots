@@ -28,7 +28,7 @@ return {
   },
   -- {
   --   "jose-elias-alvarez/null-ls.nvim",
-  --   ft = {"python"},
+  --   ft = {"python", "c"},
   --   opts = require "configs.null-ls"
   -- },
   {
@@ -46,7 +46,7 @@ return {
   -- 	opts = {
   -- 		ensure_installed = {
   -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
+  --      "html", "css", "c"
   -- 		},
   -- 	},
   -- },
